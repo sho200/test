@@ -1,5 +1,5 @@
 from flask import Flask, request, abort
-import os
+
 
 app = Flask(__name__)
 # 必須ではないけれど、サーバに上がったとき確認するためにトップページを追加しておきます。
