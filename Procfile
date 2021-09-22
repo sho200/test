@@ -1,1 +1,1 @@
-echo web: gunicorn my_flask_script:app --log-file -
+echo web: gunicorn test:app --log-file -
