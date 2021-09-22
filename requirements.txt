@@ -3,3 +3,8 @@ gspread
 ServiceAccountCredentials
 TextSendMessage
 LineBotApi
+os
+sys
+logging
+flask
+line-bot-sdk
