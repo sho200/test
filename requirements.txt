@@ -1,6 +1,4 @@
 datetime
 requests
-os
-sys
 Flask
 abort
