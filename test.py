@@ -1,19 +1,8 @@
-from flask import Flask, request, abort
-import logging
-import sys
+import os
+from bottle import route, run
 
-app = Flask(__name__)
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.INFO)
+@route("/")
+def hello_world():
+        return "Hello World!"
 
-@app.route('/')
-def top_page():
-    return 'Here is root page.'
-
-@app.route('/callback', methods=['POST'])
-def callback_post():
-
-    return 'OK'
-
-if __name__ == '__main__':
-    app.run()
+run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
