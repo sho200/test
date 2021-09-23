@@ -1,1 +1,1 @@
-web: gunicorn -k uvicorn.workers.UvicornWorker test:api
+web: python test.py 
