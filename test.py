@@ -1,6 +1,11 @@
 from flask import Flask, request, abort
+import logging
+import sys
 
 app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.INFO)
+
 @app.route('/')
 def top_page():
     return 'Here is root page.'
